@@ -1,0 +1,222 @@
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #f5f7fa);
+    padding: 40px 20px;
+    color: #2c3e50;
+    min-height: 100vh;
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 38px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+}
+
+/* Mood Selector */
+label[for="mood"] {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#mood {
+    display: block;
+    margin: 0 auto 25px auto;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffffff, #f0f0f0);
+    transition: all 0.3s ease;
+    width: 260px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#mood:focus {
+    outline: none;
+    border-color: #27ae60;
+    box-shadow: 0 0 8px rgba(39, 174, 96, 0.4);
+}
+
+/* Task Input Section */
+.task-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.task-input label {
+    font-weight: 600;
+    font-size: 16px;
+    color: #2c3e50;
+}
+
+#task {
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 260px;
+    transition: all 0.3s ease;
+    background: linear-gradient(to right, #ffffff, #f8f8f8);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#task:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.4);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #27ae60, #2ecc71);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: linear-gradient(to right, #229954, #27ae60);
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Centered Submit Button */
+.submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+/* Task List */
+#task-list {
+    max-width: 600px;
+    margin: 20px auto;
+    padding-left: 25px;
+    list-style: none;
+}
+
+.task-item {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #2c3e50;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.3s ease;
+}
+
+.task-item::before {
+    content: "📝";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 16px;
+}
+
+.task-item:hover {
+    color: #27ae60;
+}
+
+#past-logs {
+    max-width: 650px;
+    margin: 40px auto 0 auto;
+    padding: 25px;
+    background: #f9f9f9;
+    border-left: 6px solid #3498db;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#past-logs h2 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+    font-size: 22px;
+}
+
+.log-list {
+    list-style: square inside;
+    color: #34495e;
+}
+
+.log-list li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Result Section */
+#result {
+    max-width: 650px;
+    margin: 35px auto 0 auto;
+    background-color: #eafaf1;
+    border-left: 6px solid #2ecc71;
+    border-radius: 12px;
+    padding: 20px 25px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#result p {
+    font-size: 16px;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+#result em {
+    font-style: normal;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    #mood,
+    #task {
+        width: 90%;
+    }
+
+    .task-input {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .submit-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

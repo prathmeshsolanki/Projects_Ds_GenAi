@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Mood & Productivity Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Daily Mood & Productivity Tracker</h1>
+
+    <label for="mood">Mood:</label>
+    <select id="mood">
+        <option value="motivated">Motivated</option>
+        <option value="happy">Happy</option>
+        <option value="stressed">Stressed</option>
+        <option value="lazy">Lazy</option>
+        <option value="sad">Sad</option>
+    </select>
+
+
+    <div class="task-input">
+        <label for="task">Enter Task:</label>
+        <input type="text" id="task" placeholder="e.g. Completed coding assignment">
+        <button id="addBtn">Add Task</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <div class="submit-container">
+        <button id="submitBtn">Submit</button>
+        <button id="viewLogsBtn">View Daily Updates</button>
+    </div>
+    
+    
+    <div id="past-logs"></div>
+    
+    <div id="result"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
