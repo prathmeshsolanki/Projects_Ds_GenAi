@@ -1,4 +1,5 @@
-Daily Mood & Productivity Tracker: 1st project(4week python learnings)
+**Daily Mood & Productivity Tracker:** 
+1st project(4week python learnings)
 
 --> This is a simple full-stack project designed to help users track their daily mood, completed tasks, and overall productivity score. It also provides a motivational quote to help users stay focused and positive throughout the day.
 
